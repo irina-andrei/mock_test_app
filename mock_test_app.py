@@ -1,4 +1,5 @@
-# A Python program that allows user to test their Cloud Practitioner knowledge.
+# A Python program acting as a Mock Test using OOP and functions 
+# to access a .txt file with questions for the AWS Cloud Practitioner Test. 
 
 
 import random as rd
@@ -44,23 +45,23 @@ class Question():
 
 
 def random_qs_generator(num_q, max_value):
-    """ Function returns a list with randomly generated unique numbers (questions).
+    """ Function returns a list with randomly generated unique numbers.
     Parameters: num_q (int), max_value (int).
-    Returns: arr (list) """
+    Returns: unique_nr (list) """
     
-    arr = []
+    unique_nr = []
     temp = rd.randint(1, max_value)
     
     for index in range(num_q):
         
-        while temp in arr:
+        while temp in unique_nr:
             temp = rd.randint(1, max_value)
             
-        arr.append(temp)
+        unique_nr.append(temp)
         
-    arr.sort()
+    unique_nr.sort()
     
-    return arr
+    return unique_nr
 
 
 def quiz():
@@ -70,7 +71,7 @@ def quiz():
 
     question_nr = 0
     
-    number_Qs = int(input(f"{ENDC}How many questions do you want to answer? {CYAN}"))
+    number_Qs = int(input(f"{ENDC}How many questions would you like? {CYAN}"))
     
     questions_to_display = random_qs_generator(number_Qs, 20)
     
@@ -87,7 +88,10 @@ def quiz():
             ╚{'═' * 19}╝{ENDC}\n'''
         print(title)
         
-        answers_order = [quest_list[question_nr-1].get_answer1(), quest_list[question_nr-1].get_answer2(), quest_list[question_nr-1].get_answer3(), quest_list[question_nr-1].get_answer4()]
+        answers_order = [quest_list[question_nr-1].get_answer1(), 
+                        quest_list[question_nr-1].get_answer2(), 
+                        quest_list[question_nr-1].get_answer3(), 
+                        quest_list[question_nr-1].get_answer4()]
         rd.shuffle(answers_order)
 
         output = f'''{YELLOW}{quest_list[question_nr-1].get_question_text()}
@@ -145,7 +149,7 @@ def read_questions_data():
                 quest = Question(q_data[0], q_data[1], q_data[2], 
                                 q_data[3], q_data[4])
                 quest_list.append(quest)
-                # Saving each question one by one from file to our question list.
+                # Saving each question 1 by 1 from file to our question list.
                 
         
     except FileNotFoundError:
@@ -184,10 +188,10 @@ print(title)
 
 print(f'''Welcome to your {PINK}Mock Test{ENDC}. 
     Let's test your {GREEN}knowledge{ENDC}.''')
-user_name = input(f"\nFirst, enter your name: {CYAN}").capitalize()
+username = input(f"\nFirst, enter your name: {CYAN}").capitalize()
 # Getting the user's name and starting the test. 
 
-print(f"{ENDC}\nGreat stuff, {BLUE}{user_name}{ENDC}. Now let's get started...\n")
+print(f"{ENDC}\nGreat stuff, {BLUE}{username}{ENDC}. Now let's get started.\n")
 
 # magic_number = rd.randint(1, 20)
 
@@ -201,7 +205,7 @@ while user_choice == 'yes':
     quiz()
     while True:
         try:
-            user_choice = input(f"\nDo you want to take the test again? yes/no: {CYAN}").lower()
+            user_choice = input(f"\nTake the test again? yes/no: {CYAN}").lower()
             if user_choice != "yes" and user_choice != "no":
                 raise Exception("Sorry, not valid. Please enter 'yes' or 'no'.")
             else:
