@@ -1,0 +1,19 @@
+You ONLY want to manage Applications and Data. Which type of Cloud Computing model should you use?;Platform as a Service (PaaS);On-premises;Infrastructure as a Service (IaaS);Software as a Service (SaaS)
+What is the pricing model of Cloud Computing?;Pay-as-you-go pricing;Discounts over time;Pay once a year;Flat-rate pricing
+Which Global Infrastructure identity is composed of one or more discrete data centers with redundant power, networking and connectivity and are used to deploy infrastructure?;Availability Zones;Edge Locations;Regions;Areas
+Which of the following is NOT one of the Five Characteristics of Cloud Computing?;Dedicated Support Agent to help you deploy applications;Rapid elasticity and scalability;Multi-tenancy and resource pooling;On-demand self service
+Which are the 3 pricing fundamentals of the AWS Cloud?;Compute,Storage and Data transfer out of the AWS Cloud;Compute,Storage and Data transfer in the AWS Cloud;Compute, Networking and Data transfer out of the AWS Cloud;Storage, Functions and Data transfer in the AWS Cloud
+Which of the following options is NOT a point of consideration when choosing an AWS Region?;Capacity availability;Compliance with data governance;Latency;Pricing
+Which of the following is NOT an advantage of Cloud Computing?;Train your employees less;Trade capital expense (CAPEX) for operational expense (OPEX);Go global in minutes;Stop spending money running and maintaining data centres
+AWS Regions are composed of?;Three or more Availability Zones;Two or more Edge locations;One or more discrete data centres;Two or more discrete data centres
+Which of the following services has a global scope?;IAM;EC2;Lambda;Rekognition
+Which of the following is the definition of Cloud Computing?;On-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user;Rapidly develop, test and launch software applications;Automatic and quick ability to aquire resources as you need them and release resources when you no longer need them;Change resource types when needed
+What defines the distribution of responsibilities for security in the AWS Cloud?;The Shared Responsibility Model;AWS Pricing Fundamentals;AWS Acceptable Use Policy;The AWS Management Console
+A company would like to benefit from the advantages of the Public Cloud but would like to keep sensitive assets in its own infrastructure. Which deployment model should the company use?;Hybrid Cloud;Private Cloud;Public Cloud;It's not possible
+What is NOT authorised to do on AWS according to the AWS Acceptable Use Policy?;Run analytics on stolen content;Building a gaming application;Deploying a website;Backup your data
+What is a proper definition of IAM Roles?;An IAM entity that defines a set of permissions for making AWS service requests, that will be used by AWS services;IAM Users in multiple Groups;A password policy;Permissions assigned to Users to perform applications
+Which of the following is an IAM Security Tool?;IAM Credentials report;IAM Root Account Manager;IAM Services Report;IAM Security Advisor
+Which answer is INCORRECT regarding IAM Users?;IAM Users access AWS with the root account credentials;IAM Users can belong to multiple groups;IAM Users don't have to belong to a group;IAM Users can have policies assigned to them
+Which of the following is an IAM best practice?;Don't use the root user account;Create several users for a physical person;Share credentials so a colleague can perform a task for you;Do not enable MFA for easier access
+What are IAM Policies?;JSON documents to define Users, Groups or Roles' permissions;AWS services performable actions;Rules to set up a password for IAM Users;A guide on Security Policies
+Under the shared responsibility model, what is the customer responsible for in IAM?;Assigning users proper IAM Policies;Infrastructure security;Compliance validation;Configuration and vulnerability analysis
