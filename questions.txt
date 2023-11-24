@@ -17,3 +17,4 @@ Which answer is INCORRECT regarding IAM Users?;IAM Users access AWS with the roo
 Which of the following is an IAM best practice?;Don't use the root user account;Create several users for a physical person;Share credentials so a colleague can perform a task for you;Do not enable MFA for easier access
 What are IAM Policies?;JSON documents to define Users, Groups or Roles' permissions;AWS services performable actions;Rules to set up a password for IAM Users;A guide on Security Policies
 Under the shared responsibility model, what is the customer responsible for in IAM?;Assigning users proper IAM Policies;Infrastructure security;Compliance validation;Configuration and vulnerability analysis
+Which principle should you apply regarding IAM Permissions?;Grant least privilege;Grant most privilege;Grant permissions if your employee asks you to;Restrict root account permissions

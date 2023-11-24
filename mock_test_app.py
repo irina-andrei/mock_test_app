@@ -21,16 +21,16 @@ class Question():
     def get_correct_answer(self):
         correct = self.answer1
         return correct
-
+    
     def get_answer1(self):
         return self.answer1
-
+    
     def get_answer2(self):
         return self.answer2
-
+    
     def get_answer3(self):
         return self.answer3
-
+    
     def get_answer4(self):
         return self.answer4
     
@@ -58,8 +58,6 @@ def random_qs_generator(num_q, max_value):
             temp = rd.randint(1, max_value)
             
         unique_nr.append(temp)
-        
-    unique_nr.sort()
     
     return unique_nr
 
@@ -68,15 +66,22 @@ def quiz():
     """ Function prints out the questions and calculates the score.
     Parameters: None
     Returns: None """
-
-    question_nr = 0
     
-    number_Qs = int(input(f"{ENDC}How many questions would you like? {CYAN}"))
+    while True:
+        try:
+            number_Qs = int(input(f"{ENDC}How many questions would you like? (max 20) {CYAN}"))
+            if number_Qs <= 20:
+                break
+            else:
+                raise Exception("Sorry, not valid. Please enter number between 1 and 20.")
+        except Exception as error:
+            print(f"{EM} {error} Let's try again.")
     
     questions_to_display = random_qs_generator(number_Qs, 20)
     
     score = 0
-
+    question_nr = 0
+    
     while True:
         question_nr += 1
         number = str(question_nr)
@@ -88,21 +93,20 @@ def quiz():
             ╚{'═' * 19}╝{ENDC}\n'''
         print(title)
         
-        answers_order = [quest_list[question_nr-1].get_answer1(), 
-                        quest_list[question_nr-1].get_answer2(), 
-                        quest_list[question_nr-1].get_answer3(), 
-                        quest_list[question_nr-1].get_answer4()]
+        current_q = quest_list[questions_to_display[question_nr-1]-1]
+        answers_order = [current_q.get_answer1(), 
+                        current_q.get_answer2(), 
+                        current_q.get_answer3(), 
+                        current_q.get_answer4()]
         rd.shuffle(answers_order)
-
-        output = f'''{YELLOW}{quest_list[question_nr-1].get_question_text()}
+        
+        output = f'''{YELLOW}{current_q.get_question_text()}
             {BLUE}A: {PINK}{answers_order[0]}
             {BLUE}B: {PINK}{answers_order[1]}
             {BLUE}C: {PINK}{answers_order[2]}
             {BLUE}D: {PINK}{answers_order[3]}{ENDC}'''
         print(output) 
-    
         
-
         while True:
             try:
                 letter = input(f"Your answer: {CYAN}").upper()
@@ -121,15 +125,13 @@ def quiz():
             answer = answers_order[2]
         elif letter == 'D':
             answer = answers_order[3]
-
-        if answer == quest_list[question_nr-1].get_correct_answer():
+        
+        if answer == current_q.get_correct_answer():
             print(f"{GREEN}That was correct!")
             score += 10
         else:
-            print(f"{RED}Sorry.{ENDC} Wrong Answer.")
-
-
-
+            print(f"{RED}Sorry, wrong answer{ENDC}.")
+        
         if question_nr == number_Qs:
             print(f"{LIGHTCYAN}\nLet's see how you've done... {ENDC}")
             print(f"Your score is: {PURPLE}{score}/{number_Qs*10}{ENDC}")
@@ -144,14 +146,11 @@ def read_questions_data():
     try:
         with open('questions.txt', 'r', encoding='utf-8') as questions:
             for line in questions:                
-                
                 q_data = line.strip().split(";")
                 quest = Question(q_data[0], q_data[1], q_data[2], 
                                 q_data[3], q_data[4])
                 quest_list.append(quest)
                 # Saving each question 1 by 1 from file to our question list.
-                
-        
     except FileNotFoundError:
         print(f"\n{EM} Questions file not found.")
     except IndexError:
@@ -185,7 +184,6 @@ title = f'''
 print(title)
 # This will print out the title.
 
-
 print(f'''Welcome to your {PINK}Mock Test{ENDC}. 
     Let's test your {GREEN}knowledge{ENDC}.''')
 username = input(f"\nFirst, enter your name: {CYAN}").capitalize()
@@ -193,13 +191,10 @@ username = input(f"\nFirst, enter your name: {CYAN}").capitalize()
 
 print(f"{ENDC}\nGreat stuff, {BLUE}{username}{ENDC}. Now let's get started.\n")
 
-# magic_number = rd.randint(1, 20)
-
 quest_list = []
 user_choice = 'yes'
 
 read_questions_data()
-
 
 while user_choice == 'yes':
     quiz()
@@ -217,6 +212,5 @@ while user_choice == 'yes':
         break
     else:
         print(f"{GREEN}\nLet's start the Quiz again! {ENDC}\n")
-
 
 sleep(2)
