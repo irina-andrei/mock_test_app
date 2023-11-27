@@ -139,7 +139,7 @@ def quiz():
 
 
 def read_questions_data():
-    """ Function reads the questions file and saves the contents to a list.
+    """ Function reads the questions file and saves the contents as objects.
     Parameters: None
     Returns: None """
     
@@ -150,7 +150,8 @@ def read_questions_data():
                 quest = Question(q_data[0], q_data[1], q_data[2], 
                                 q_data[3], q_data[4])
                 quest_list.append(quest)
-                # Saving each question 1 by 1 from file to our question list.
+                # Saving each question 1 by 1 from file as objects 
+                # and adding them all to the 'quest_list'.
     except FileNotFoundError:
         print(f"\n{EM} Questions file not found.")
     except IndexError:
@@ -192,9 +193,11 @@ username = input(f"\nFirst, enter your name: {CYAN}").capitalize()
 print(f"{ENDC}\nGreat stuff, {BLUE}{username}{ENDC}. Now let's get started.\n")
 
 quest_list = []
+# This list will contain all the questions for the quiz as objects.
 user_choice = 'yes'
 
 read_questions_data()
+# This will read the 'questions.txt' file and save the questions.
 
 while user_choice == 'yes':
     quiz()
