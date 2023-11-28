@@ -89,3 +89,11 @@ Which service is referred to as a Platform as a Service (PaaS)?;Elastic Beanstal
 What is called the declaration of the AWS resources that make up a stack?;CloudFormation Templates;CloudFormation Schemas;CloudFormation Diagrams;CloudFormation Models
 Which of the following services can a developer use to store code dependencies?;CodeArtifact;CodeBuild;CodeCommit;Cloud9
 Which serverless service can be used to build code and run tests?;CodeBuild;CodeStar;Cloud Development Kit (CDK);CodePipeline
+Which Route 53 Routing Policies would you use to route traffic to multiple resources in proportions that you specify?;Weighted Routing Policy;Simple Routing Policy;Latency Routing Policy;Failover Routing Policy
+Which service is optimized to deploy ultra-low latency applications to 5G devices?;WaveLength;Route 53;CloudFront;Fargate
+You need to enable fast, easy, and secure transfers of files over long distances on S3. Which service would you use?;S3 Transfer Acceleration;AWS Global Accelerator;S3 Cross-Region Replication;AWS Global Replication
+What does AWS CloudFront use to improve read performance?;Caching Content in Edge Locations;DDoS Protection;S3 Buckets Fast-Read;Caching Content in Edge Locations
+Which service can be used to run AWS infrastructure and services on-premises for a hybrid cloud architecture?;Outposts;CloudFront;DMS;Storage Gateway
+Which of the following statements is NOT a reason for a global application?;Scale elastically on demand;Decreased Latency;Disaster Recovery;Attack protection
+Which features are available with Route 53?;Domain Registration, DNS, Health Checks, Routing Policy;Health Checks, Auto Scaling, Routing Policy, DNS;Load Balancing, DNS, Domain Registration, Monitoring;Domain Registration, DNS, Health Checks, DDoS Protection
+With which services does CloudFront integrate to protect against web attacks?;WAF & Shield;WAF & IAM;IAM & Shield;Security Groups & WAF

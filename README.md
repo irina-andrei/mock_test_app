@@ -5,7 +5,10 @@
 #### Features:
 * It accesses **'questions.txt'**.
 * Lets user choose how many questions they would like to answer. 
-* Displays their score at the end.
+* The order in which the answers for each question is displayed will always be different and randomised.
+* The questions will all be randomly chosen and displayed in no particular order, without repeats.
+* Program at the end will display the total number of correct answers as well as the score as a percentage.
+* Gives the ability to take the quiz multiple times.
 
 <br>
 

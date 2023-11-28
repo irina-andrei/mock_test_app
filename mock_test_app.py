@@ -134,12 +134,14 @@ def quiz():
         if answer == current_q.get_correct_answer():
             print(f"{LIGHTGREEN}That was correct, {username}!")
             score += 1
+            sleep(2)
         else:
             print(f"{LIGHTRED}Sorry {username}, wrong answer.{ENDC}")
+            sleep(2)
         
         if question_nr == number_Qs:
             print(f"{LIGHTBLUE}\nLet's see how you've done, {username}... {ENDC}")
-            print(f"You answered correctly {GREEN}{score}{ENDC} out of {BLUE}{number_Qs}{ENDC} questions.")
+            print(f"You answered correctly {GREEN}{score}{ENDC} out of {PINK}{number_Qs}{ENDC} questions.")
             final = round(score/number_Qs*100)
             if final < 70:
                 print(f"Your score is: {RED}{final}% \nYou failed. :({ENDC}")
