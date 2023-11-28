@@ -2,7 +2,7 @@ You ONLY want to manage Applications and Data. Which type of Cloud Computing mod
 What is the pricing model of Cloud Computing?;Pay-as-you-go pricing;Discounts over time;Pay once a year;Flat-rate pricing
 Which Global Infrastructure identity is composed of one or more discrete data centers with redundant power, networking and connectivity and are used to deploy infrastructure?;Availability Zones;Edge Locations;Regions;Areas
 Which of the following is NOT one of the Five Characteristics of Cloud Computing?;Dedicated Support Agent to help you deploy applications;Rapid elasticity and scalability;Multi-tenancy and resource pooling;On-demand self service
-Which are the 3 pricing fundamentals of the AWS Cloud?;Compute,Storage and Data transfer out of the AWS Cloud;Compute,Storage and Data transfer in the AWS Cloud;Compute, Networking and Data transfer out of the AWS Cloud;Storage, Functions and Data transfer in the AWS Cloud
+Which are the 3 pricing fundamentals of the AWS Cloud?;Compute, Storage and Data transfer out of the AWS Cloud;Compute, Storage and Data transfer in the AWS Cloud;Compute, Networking and Data transfer out of the AWS Cloud;Storage, Functions and Data transfer in the AWS Cloud
 Which of the following options is NOT a point of consideration when choosing an AWS Region?;Capacity availability;Compliance with data governance;Latency;Pricing
 Which of the following is NOT an advantage of Cloud Computing?;Train your employees less;Trade capital expense (CAPEX) for operational expense (OPEX);Go global in minutes;Stop spending money running and maintaining data centres
 AWS Regions are composed of?;Three or more Availability Zones;Two or more Edge locations;One or more discrete data centres;Two or more discrete data centres
@@ -12,9 +12,80 @@ What defines the distribution of responsibilities for security in the AWS Cloud?
 A company would like to benefit from the advantages of the Public Cloud but would like to keep sensitive assets in its own infrastructure. Which deployment model should the company use?;Hybrid Cloud;Private Cloud;Public Cloud;It's not possible
 What is NOT authorised to do on AWS according to the AWS Acceptable Use Policy?;Run analytics on stolen content;Building a gaming application;Deploying a website;Backup your data
 What is a proper definition of IAM Roles?;An IAM entity that defines a set of permissions for making AWS service requests, that will be used by AWS services;IAM Users in multiple Groups;A password policy;Permissions assigned to Users to perform applications
-Which of the following is an IAM Security Tool?;IAM Credentials report;IAM Root Account Manager;IAM Services Report;IAM Security Advisor
+Which of the following is an IAM Security Tool?;IAM Credentials Report;IAM Root Account Manager;IAM Services Report;IAM Security Advisor
 Which answer is INCORRECT regarding IAM Users?;IAM Users access AWS with the root account credentials;IAM Users can belong to multiple groups;IAM Users don't have to belong to a group;IAM Users can have policies assigned to them
 Which of the following is an IAM best practice?;Don't use the root user account;Create several users for a physical person;Share credentials so a colleague can perform a task for you;Do not enable MFA for easier access
 What are IAM Policies?;JSON documents to define Users, Groups or Roles' permissions;AWS services performable actions;Rules to set up a password for IAM Users;A guide on Security Policies
 Under the shared responsibility model, what is the customer responsible for in IAM?;Assigning users proper IAM Policies;Infrastructure security;Compliance validation;Configuration and vulnerability analysis
 Which principle should you apply regarding IAM Permissions?;Grant least privilege;Grant most privilege;Grant permissions if your employee asks you to;Restrict root account permissions
+What should you do to increase your root account security?;Enable Multi-Factor Authentification (MFA);Remove permissions from the root account;Use AWS only through the Command Line Interface (CLI);Never use the root account
+Which EC2 Purchasing Option can prodive the biggest discount, but is not suitable for critical jobs or databases?;Spot Instances;Reserved Instances;Convertible Instances;Dedicated Hosts
+Which network security tool can you use to control traffic in and out of EC2 Instances?;Security Groups;Network Access Control List (NACL);Identity and Management Access (IAM);GuardDuty
+Under the Shared Responsibility Model, who is responsible for operating-system patches and updates on EC2 Instances?;The customer;AWS;Both AWS and the customer;Operating-system wouldn't need updates
+How long can you reserve an EC2 Reserved Instance?;1 or 3 years;2 or 4 years;6 months or 1 year;Anytime between 1 and 3 years
+A company would like to deploy a high-performance computing (HPC) application on EC2. Which EC2 instance type should it choose?;Compute Optimised;Storage Optimised;Memory Optimised;General Purpose
+Which of the following is NOT an EC2 Instance Purchasing Option?;Connect Instances;Spot Instances;Reserved Instances;On-demand Instances
+Which EC2 Purchasing Option should you use for an application you plan on running on a server continuously for 1 year?;Reserved Instances;Spot Instances;On-demand Instances;Convertible Instances
+Which EC2 Storage would you use to create a shared network file system for your EC2 Instances?;EFS;EBS Volume;EC2 Instance Store;EBS Snapshots
+Which service can be used to automate image management processes?;EC2 Image Builder;AMI;EBS Snapshots;IAM
+Which of the following is a fully managed native Microsoft Windows file system?;FSx;EFS;EBS;FBS
+What are AMIs NOT used for?;Add your own IP addresses;Add your own software licence;Add your own configuration;Add your own operating-system
+Which statement is CORRECT regarding EC2 Instance Store?;It has a better I/O performance, but the data is lost if the EC2 Instance is terminated;It is not good to use as a disk to cache content;Your data is always safe with EC2 Instance Store;Your data is backed-up
+What is an EBS Snapshot?;A backup of your EBS Volume at a point in time;The operating-system on an EC2 Instance;The amount of CPU and RAM of an EC2 Instance;A screenshot of the terminal at a point in time
+Where can you find a 3rd party's AMI so you can use it to launch your EC2 Instance?;AWS Marketplace AMIs;Public AMIs;My own AMIs;You can't use 3rd party AMIs
+What is an EBS Volume tied to?;An availability zone;A region;A data centre;An edge locations
+What is the main purpose of High Availability in the Cloud?;Application thriving even in case of a disaster;Increase scalability;Access on computers and smartphones;Handle greater loads by launching EC2 instances based on the demand
+Which AWS offered Load Balancer should you use to handle hundreds of thousands of connections with low latency?;Network Load Balancer;Application Load Balancer;Elastic Load Balancer;Nothing can handle that many connections with low latency
+Changing an EC2 Instance Type from a t3a.medium to a t3a.2xlarge is an example of?;Vertical scaling;Horizontal scaling;High Availability;Agility
+What can you use to handle quickly and automatically the changing load on your websites and applications by adding compute resources?;An Auto Scaling Group;An Elastic Load Balancer;A bigger instance type;Health Checks on your EC2 Instances
+Which of the following statements is INCORRECT regarding Auto Scaling Groups?;Automatically changing the EC2 Instances Types;Replace unhealthy instances;Are cost-effective by running at optimal capacity;Automatically register new instances to a load Balancer
+Which Load Balance is best suited for HTTP/HTTPS load balancing traffic?;Application Load Balancer;Network Load Balancer;Classic Load Balancer;Elastic Load Balancer
+Which of the following is NOT an Auto Scaling Strategy?;Active Scaling;Manual Scaling;Dynamic Scaling;Predictive Scaling
+Which AWS service offers easy horizontal scaling of compute capacity?;ASG;EBS;AMI;IAM
+Which of the following statements is NOT a feature of Load Balancers?;Back-end autoscaling;Do regular health checks to your instances;Spread load across multiple downstream instances;Handle failures of downstream instances
+Which S3 Storage Class is the most cost-effective for archiving data with no retrieval time requirement?;Amazon Glacier Deep Archive;Amazon Glacier;Amazon S3 Standard-Infrequent Access;Amazon S3 Intelligent Tiering
+What hybrid AWS service is used to allow on-premises servers to seamlessly use the AWS Cloud at the storage layer?;Storage Gateway;Elastic Block Store;Snowball;S3
+Which of the following services is a petabyte-scale data moving service (as a fleet) in or out of AWS with computing capabilities?;Snowball Edge;Snowcone;Snowmobile;Snowplow
+Which of the following is an exabytes-scale data moving service in and out of AWS?;Snowmobile;Snowball Edge;Snowcone;Snowplow
+In S3, what are Objects NOT composed of?;Access Keys;Metadata;Key;Value
+Where are objects stores in Amazon S3?;Buckets;Folders;Files;Bin
+A research team deployed in a location with low-internet connection would like to move 5 TBs of data to the Cloud. Which service can it use?;Snowcone;Storage Gateway;Snowball Edge;OpsHub
+What can you use to define actions to move S3 objects between different storage classes?;Lifecycle Rules;Scaling Policy;Bucket Policies;Replication
+You want to create a decentralised blockchain on AWS. Which AWS service would you use?;Managed Blockchain;DocumentDB;QLDB;QuickSight
+Which AWS database is a data warehouse?;Redshift;DynamoDB;ElastiCache;RDS
+Which AWSs service is always serverless and has SQL capabilities?;Athena;RDS;Aurora;DynamoDB
+You would like to use a serverless service to prepare data so it can be loaded for analytics. Which service would you use?;Glue;Athena;RDS;ElastiCache
+Which relational database is a proprietary technology from AWS and is cloud-optimised?;Aurora;DynamoDB;Oracle;Athena
+You would like to migrate databses to AWS while still being able to use the database during the migration. What service allows you to do this?;Database Migration Service (DMS);Elastic MapReduce (EMR);AWS Storage Gateway;Snowball
+How can you create Hadoop clusters to analyse and process a vast amount of data?;EMR;Athena;EC2 Instances;Redshift
+Which in-memory AWS database can you use to reduce the load off databases and has high performance, low latency?;ElastiCache;Redshift;RDS;DynamoDB
+What is the name of a central repository to store structural and operational metadata for data assets in AWS Glue?;Glue Data Catalog;Glue Data Table;Glue Data Dictionary;Glue Data Repository
+Which of the following databases is a managed service with SQL capability suited for Online Transaction Processing (OLTP)?;RDS;DynamoDB;Redshift;MySQL on EC2
+Which AWS service is an immutable ledger database?;QLDB;EMR;Managed Blockchain;Inspector
+You would like to set up a NoSQL database that can scale with no downtime and can handle millions of requests per second. Which AWS database is best suited for this work?;DynamoDB;RDS;Redshift;Athena
+Which AWS service can create complex graphs for fraud detection?;Neptune;Redshift;QLDB;Glue
+Which AWS serverless service can use machine learning-powered business intelligence to create interactive dashboards such as business analytics?;QuickSight;Aurora;Athena;Managed Blockchain
+A company would like to set up a fully managed MongoDB database. Which AWS database is best-suited for this task?;DocumentDB;ElastiCache;RDS;Neptune
+Which exclusive DynamoDB feature is an in-memory cache that can improve your performance up to 10x?;DynamoDB Accelerator;ElastiCache;Edge Locations;Snowball Edge
+How do you get charged in AWS Lambda?;Per call and per duration;Per programming language;Per number of functions;Per inactive time
+You would like to launch Docker containers in AWS without worrying about provisioning or managing any infrastructure. The Docker containers will be used to host a heavy workloads to serve different types of requests. Some requests may need up to 30 minutes to be completed. Which AWS service should you use to run Docker containers in a Serverless way and satisfy the requirements?;Fargate;ECS;ECR;Lambda
+A complete cloud beginner would like to create a simple application with predictable pricing. What service should this person use?;Lightsail;EC2;Lambda;EasyStart
+What is the name of the software development platform that allows you to run applications the same way, regardless of where they are run?;Docker;Dolphin;Shark;ECS
+How would you best describe 'event-driven' in AWS Lambda?;Happens when needed;Happens on a certain day;Happens at a certain time;Happens on a regular basis
+Which AWS service allows you to launch Docker containers on AWS, but requires you to provision and maintain the infrastructure?;ECS;ECR;EC2;Fargate
+Which of the following statements is INCORRECT regarding the definition of the term 'serverless'?;There are no servers;Serverless allows you to deploy functions as a service;You don't need to manage servers;Lambda is the serverless pioneer
+Which of the following statements is NOT a feature of AWS Lambda?;Definition of a minimum and a maximum of EC2 Instances running;Integration with the whole AWS suite of services;Virtual functions;Automated and continuous scaling
+A company needs to run thousands of jobs but would like to NOT manage the compute resources. What service can it use?;Batch;ECS;EC2 Spot Instances;EC2 Instances
+Where should you store your private Docker images so they can be run by ECS or Fargate?;Elastic Container Registry;Elastic Docker Registry;Elastic Docker File Registry;Elastic Private Container Registry
+Which AWS serverless service can be used by developers to create APIs?;API Gateway;ECR;Lambda;ECS
+Which AWS managed service allows to automate software deployments to a hybrid mix of EC2 Instances and On-Premises servers?;CodeDeploy;CloudFormation;Elastic Beanstalk;CodeStar
+You are a software developer working on a project with your team. You need a secure and reliable version control system to store, share, and collaborate your code with the team. Which AWS service can help the developers?;CodeCommit;CodeDeploy;CodePipeline;Cloud9
+You need a unified user interface that gives you visibility, control, and patching capabilities for your EC2 Instances on AWS, as well as for servers running in your on-premises data centers. Which service should you use?;Systems Manager;Storage Gateway;OpsWorks;Elastic Container Service
+You need to use Chef or Puppet. Which AWS service should you use?;OpsWorks;CloudFormation;CodeDeploy;CodeCommit
+A developer would like to deploy infrastructure on AWS but only knows Python. Which AWS service can assist him?;Cloud Development Kit (CDK);Software Development Kit (SDK);CloudFormation;CodeBuild
+Which of the following allows you to deploy any AWS Infrastructure as a Code?;CloudFormation;Elastic Beanstalk;OpsWorks;Systems Manager
+A new startup would like an online integrated development environment (IDE) to write, run and debug code. Which AWS service can help with this task?;Cloud9;OpsWorks;CodeArtifact;CodeStar
+Which service is referred to as a Platform as a Service (PaaS)?;Elastic Beanstalk;OpsWorks;CloudFormation;EC2
+What is called the declaration of the AWS resources that make up a stack?;CloudFormation Templates;CloudFormation Schemas;CloudFormation Diagrams;CloudFormation Models
+Which of the following services can a developer use to store code dependencies?;CodeArtifact;CodeBuild;CodeCommit;Cloud9
+Which serverless service can be used to build code and run tests?;CodeBuild;CodeStar;Cloud Development Kit (CDK);CodePipeline

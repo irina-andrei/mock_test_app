@@ -5,7 +5,9 @@
 import random as rd
 from time import sleep
 
-
+'''import sys, os
+os.chdir(sys._MEIPASS)'''
+# Uncomment this only when using pyinstaller to create .exe file
 
 class Question():
     def __init__(self, question_text, answer1, answer2, answer3, answer4):
@@ -69,15 +71,18 @@ def quiz():
     
     while True:
         try:
-            number_Qs = int(input(f"{ENDC}How many questions would you like? (max 20) {CYAN}"))
-            if number_Qs <= 20:
-                break
+            number_Qs = int(input(f"{ENDC}Enter how many questions you would like (max {total_nr_questions}): {CYAN}"))
+            if number_Qs < 1 or number_Qs > total_nr_questions:
+                raise Exception(f"{RED}Sorry, not valid. Please enter number between 1 and {total_nr_questions}.")
             else:
-                raise Exception("Sorry, not valid. Please enter number between 1 and 20.")
+                break
         except Exception as error:
             print(f"{EM} {error} Let's try again.")
     
-    questions_to_display = random_qs_generator(number_Qs, 20)
+    print(f"\n{ENDC}I will ask you {PURPLE}{number_Qs} questions {ENDC}on {LIGHTCYAN}AWS Cloud Practitioner{ENDC}. Let's proceed...\n")
+    sleep(2)
+
+    questions_to_display = random_qs_generator(number_Qs, total_nr_questions)
     
     score = 0
     question_nr = 0
@@ -89,7 +94,7 @@ def quiz():
             number = " " + number
         title = f'''
             {BLUE}╔{'═' * 19}╗
-            ║{PINK}**{LIGHTGREEN}  QUESTION {number}  {PINK}**{BLUE}║
+            ║{PURPLE}**{GREEN}  QUESTION {number}  {PURPLE}**{BLUE}║
             ╚{'═' * 19}╝{ENDC}\n'''
         print(title)
         
@@ -100,16 +105,16 @@ def quiz():
                         current_q.get_answer4()]
         rd.shuffle(answers_order)
         
-        output = f'''{YELLOW}{current_q.get_question_text()}
-            {BLUE}A: {PINK}{answers_order[0]}
-            {BLUE}B: {PINK}{answers_order[1]}
-            {BLUE}C: {PINK}{answers_order[2]}
-            {BLUE}D: {PINK}{answers_order[3]}{ENDC}'''
+        output = f'''{CYAN}{current_q.get_question_text()}
+            {YELLOW}A: {PINK}{answers_order[0]}
+            {YELLOW}B: {PINK}{answers_order[1]}
+            {YELLOW}C: {PINK}{answers_order[2]}
+            {YELLOW}D: {PINK}{answers_order[3]}{ENDC}'''
         print(output) 
         
         while True:
             try:
-                letter = input(f"Your answer: {CYAN}").upper()
+                letter = input(f"Your answer: {LIGHTCYAN}").upper()
                 if letter == "A" or letter == "B" or letter == "C" or letter == "D":
                     break
                 else:
@@ -127,14 +132,19 @@ def quiz():
             answer = answers_order[3]
         
         if answer == current_q.get_correct_answer():
-            print(f"{GREEN}That was correct!")
-            score += 10
+            print(f"{LIGHTGREEN}That was correct, {username}!")
+            score += 1
         else:
-            print(f"{RED}Sorry, wrong answer{ENDC}.")
+            print(f"{LIGHTRED}Sorry {username}, wrong answer.{ENDC}")
         
         if question_nr == number_Qs:
-            print(f"{LIGHTCYAN}\nLet's see how you've done... {ENDC}")
-            print(f"Your score is: {PURPLE}{score}/{number_Qs*10}{ENDC}")
+            print(f"{LIGHTBLUE}\nLet's see how you've done, {username}... {ENDC}")
+            print(f"You answered correctly {GREEN}{score}{ENDC} out of {BLUE}{number_Qs}{ENDC} questions.")
+            final = round(score/number_Qs*100)
+            if final < 70:
+                print(f"Your score is: {RED}{final}% \nYou failed. :({ENDC}")
+            else:
+                print(f"Your score is: {LIGHTGREEN}{final}% \nYou passed!{ENDC}")
             break
 
 
@@ -161,8 +171,8 @@ def read_questions_data():
 
 
 # Some formatting shortcuts:
-RED = '\033[91m'
-LIGHTRED = '\033[31m'
+RED = '\033[31m'
+LIGHTRED = '\033[91m'
 GREEN = '\033[32m'
 LIGHTGREEN = '\033[92m'
 YELLOW = '\033[33m'
@@ -179,18 +189,18 @@ EM = f"{RED}‼{ENDC}"  # 'Exclamation Mark' shorthand
 
 title = f'''
     {PINK}╔{'═'*34}╗
-    ║{BLUE}**{CYAN} Cloud Practitioner Mock Test {BLUE}**{PINK}║
+    ║{PURPLE}**{CYAN} Cloud Practitioner Mock Test {PURPLE}**{PINK}║
     ╚{'═'*34}╝{ENDC}
     '''
 print(title)
 # This will print out the title.
 
-print(f'''Welcome to your {PINK}Mock Test{ENDC}. 
-    Let's test your {GREEN}knowledge{ENDC}.''')
+print(f'''Welcome to your {PURPLE}Mock Test{ENDC}. 
+        Let's test your {GREEN}knowledge!{ENDC}''')
 username = input(f"\nFirst, enter your name: {CYAN}").capitalize()
 # Getting the user's name and starting the test. 
 
-print(f"{ENDC}\nGreat stuff, {BLUE}{username}{ENDC}. Now let's get started.\n")
+print(f"{ENDC}\nGreat stuff, {PINK}{username}{ENDC}. {LIGHTYELLOW}Now let's get started.{ENDC}\n")
 
 quest_list = []
 # This list will contain all the questions for the quiz as objects.
@@ -199,11 +209,13 @@ user_choice = 'yes'
 read_questions_data()
 # This will read the 'questions.txt' file and save the questions.
 
+total_nr_questions = len(quest_list)
+
 while user_choice == 'yes':
     quiz()
     while True:
         try:
-            user_choice = input(f"\nTake the test again? yes/no: {CYAN}").lower()
+            user_choice = input(f"\nTake the test again? yes/no: {LIGHTCYAN}").lower()
             if user_choice != "yes" and user_choice != "no":
                 raise Exception("Sorry, not valid. Please enter 'yes' or 'no'.")
             else:
@@ -211,7 +223,7 @@ while user_choice == 'yes':
         except Exception as error:
             print(f"{EM} {error} Let's try again.")
     if user_choice == 'no':
-        print(f"{RED}\n Okay, goodbye. {ENDC}\n")
+        print(f"\n {ENDC}Okay, {LIGHTRED}goodbye{ENDC}.\n")
         break
     else:
         print(f"{GREEN}\nLet's start the Quiz again! {ENDC}\n")
