@@ -1,6 +1,6 @@
 You ONLY want to manage Applications and Data. Which type of Cloud Computing model should you use?;Platform as a Service (PaaS);On-premises;Infrastructure as a Service (IaaS);Software as a Service (SaaS)
 What is the pricing model of Cloud Computing?;Pay-as-you-go pricing;Discounts over time;Pay once a year;Flat-rate pricing
-Which Global Infrastructure identity is composed of one or more discrete data centers with redundant power, networking and connectivity and are used to deploy infrastructure?;Availability Zones;Edge Locations;Regions;Areas
+Which Global Infrastructure identity is composed of one or more discrete data centres with redundant power, networking and connectivity and are used to deploy infrastructure?;Availability Zones;Edge Locations;Regions;Areas
 Which of the following is NOT one of the Five Characteristics of Cloud Computing?;Dedicated Support Agent to help you deploy applications;Rapid elasticity and scalability;Multi-tenancy and resource pooling;On-demand self service
 Which are the 3 pricing fundamentals of the AWS Cloud?;Compute, Storage and Data transfer out of the AWS Cloud;Compute, Storage and Data transfer in the AWS Cloud;Compute, Networking and Data transfer out of the AWS Cloud;Storage, Functions and Data transfer in the AWS Cloud
 Which of the following options is NOT a point of consideration when choosing an AWS Region?;Capacity availability;Compliance with data governance;Latency;Pricing
@@ -19,7 +19,7 @@ What are IAM Policies?;JSON documents to define Users, Groups or Roles' permissi
 Under the shared responsibility model, what is the customer responsible for in IAM?;Assigning users proper IAM Policies;Infrastructure security;Compliance validation;Configuration and vulnerability analysis
 Which principle should you apply regarding IAM Permissions?;Grant least privilege;Grant most privilege;Grant permissions if your employee asks you to;Restrict root account permissions
 What should you do to increase your root account security?;Enable Multi-Factor Authentification (MFA);Remove permissions from the root account;Use AWS only through the Command Line Interface (CLI);Never use the root account
-Which EC2 Purchasing Option can prodive the biggest discount, but is not suitable for critical jobs or databases?;Spot Instances;Reserved Instances;Convertible Instances;Dedicated Hosts
+Which EC2 Purchasing Option can provide the biggest discount, but is not suitable for critical jobs or databases?;Spot Instances;Reserved Instances;Convertible Instances;Dedicated Hosts
 Which network security tool can you use to control traffic in and out of EC2 Instances?;Security Groups;Network Access Control List (NACL);Identity and Management Access (IAM);GuardDuty
 Under the Shared Responsibility Model, who is responsible for operating-system patches and updates on EC2 Instances?;The customer;AWS;Both AWS and the customer;Operating-system wouldn't need updates
 How long can you reserve an EC2 Reserved Instance?;1 or 3 years;2 or 4 years;6 months or 1 year;Anytime between 1 and 3 years
@@ -49,7 +49,7 @@ Which of the following services is a petabyte-scale data moving service (as a fl
 Which of the following is an exabytes-scale data moving service in and out of AWS?;Snowmobile;Snowball Edge;Snowcone;Snowplow
 In S3, what are Objects NOT composed of?;Access Keys;Metadata;Key;Value
 Where are objects stores in Amazon S3?;Buckets;Folders;Files;Bin
-A research team deployed in a location with low-internet connection would like to move 5 TBs of data to the Cloud. Which service can it use?;Snowcone;Storage Gateway;Snowball Edge;OpsHub
+A research team deployed in a location with low-internet connection would like to move 5TBs of data to the Cloud. Which service can it use?;Snowcone;Storage Gateway;Snowball Edge;OpsHub
 What can you use to define actions to move S3 objects between different storage classes?;Lifecycle Rules;Scaling Policy;Bucket Policies;Replication
 You want to create a decentralised blockchain on AWS. Which AWS service would you use?;Managed Blockchain;DocumentDB;QLDB;QuickSight
 Which AWS database is a data warehouse?;Redshift;DynamoDB;ElastiCache;RDS
@@ -79,8 +79,8 @@ A company needs to run thousands of jobs but would like to NOT manage the comput
 Where should you store your private Docker images so they can be run by ECS or Fargate?;Elastic Container Registry;Elastic Docker Registry;Elastic Docker File Registry;Elastic Private Container Registry
 Which AWS serverless service can be used by developers to create APIs?;API Gateway;ECR;Lambda;ECS
 Which AWS managed service allows to automate software deployments to a hybrid mix of EC2 Instances and On-Premises servers?;CodeDeploy;CloudFormation;Elastic Beanstalk;CodeStar
-You are a software developer working on a project with your team. You need a secure and reliable version control system to store, share, and collaborate your code with the team. Which AWS service can help the developers?;CodeCommit;CodeDeploy;CodePipeline;Cloud9
-You need a unified user interface that gives you visibility, control, and patching capabilities for your EC2 Instances on AWS, as well as for servers running in your on-premises data centers. Which service should you use?;Systems Manager;Storage Gateway;OpsWorks;Elastic Container Service
+You are a software developer working on a project with your team. You need a secure and reliable version control system to store, share and collaborate your code with the team. Which AWS service can help the developers?;CodeCommit;CodeDeploy;CodePipeline;Cloud9
+You need a unified user interface that gives you visibility, control and patching capabilities for your EC2 Instances on AWS, as well as for servers running in your on-premises data centres. Which service should you use?;Systems Manager;Storage Gateway;OpsWorks;Elastic Container Service
 You need to use Chef or Puppet. Which AWS service should you use?;OpsWorks;CloudFormation;CodeDeploy;CodeCommit
 A developer would like to deploy infrastructure on AWS but only knows Python. Which AWS service can assist him?;Cloud Development Kit (CDK);Software Development Kit (SDK);CloudFormation;CodeBuild
 Which of the following allows you to deploy any AWS Infrastructure as a Code?;CloudFormation;Elastic Beanstalk;OpsWorks;Systems Manager
@@ -91,9 +91,87 @@ Which of the following services can a developer use to store code dependencies?;
 Which serverless service can be used to build code and run tests?;CodeBuild;CodeStar;Cloud Development Kit (CDK);CodePipeline
 Which Route 53 Routing Policies would you use to route traffic to multiple resources in proportions that you specify?;Weighted Routing Policy;Simple Routing Policy;Latency Routing Policy;Failover Routing Policy
 Which service is optimized to deploy ultra-low latency applications to 5G devices?;WaveLength;Route 53;CloudFront;Fargate
-You need to enable fast, easy, and secure transfers of files over long distances on S3. Which service would you use?;S3 Transfer Acceleration;AWS Global Accelerator;S3 Cross-Region Replication;AWS Global Replication
-What does AWS CloudFront use to improve read performance?;Caching Content in Edge Locations;DDoS Protection;S3 Buckets Fast-Read;Caching Content in Edge Locations
+You need to enable fast, easy and secure transfers of files over long distances on S3. Which service would you use?;S3 Transfer Acceleration;AWS Global Accelerator;S3 Cross-Region Replication;AWS Global Replication
+What does AWS CloudFront use to improve read performance?;Caching Content in Edge Locations;DDoS Protection;S3 Buckets Fast-Read;Caching Content in Edge Regions
 Which service can be used to run AWS infrastructure and services on-premises for a hybrid cloud architecture?;Outposts;CloudFront;DMS;Storage Gateway
 Which of the following statements is NOT a reason for a global application?;Scale elastically on demand;Decreased Latency;Disaster Recovery;Attack protection
 Which features are available with Route 53?;Domain Registration, DNS, Health Checks, Routing Policy;Health Checks, Auto Scaling, Routing Policy, DNS;Load Balancing, DNS, Domain Registration, Monitoring;Domain Registration, DNS, Health Checks, DDoS Protection
 With which services does CloudFront integrate to protect against web attacks?;WAF & Shield;WAF & IAM;IAM & Shield;Security Groups & WAF
+A company using Apache ActiveMQ is migrating to the cloud. Which AWS service can it use to easily set up and operate its message brokers in the cloud?;Amazon MQ;Amazon SQS;Amazon SNS;Amazon Kinesis
+Which service is a fully managed pub/sub messaging service that makes it easy to set up, operate and send notifications from the cloud, using a push-based system?;Simple Notification Service (SNS);Simple Queue Service (SQS);Auto Scaling Groups (ASG);Simple Messaging Service (SMS)
+Which principle is mainly applied when using Amazon SQS or Amazon SNS?;Decouple your applications;Scalability;Automation;Availability
+Which service allows you to send, store and receive messages between software components at any volume, without losing messages or requiring other services to be available, using a pull-based system?;Simple Queue Service (SQS);Simple Notification Service (SNS);Auto Scaling Groups (ASG);Simple Messaging Service (SMS)
+Which CloudWatch feature would you use to trigger notifications when a metric reaches a threshold you specify?;CloudWatch Alarms;CloudWatch Events;CloudWatch Logs;CloudWatch Triggers
+Which AWS service helps developers analyse and debug production as well as distributed applications?;X-Ray;CloudWatch;Service Health Dashboard;CloudTrail
+Which AWS service provides alerts and remediation guidance when AWS is experiencing events that may impact you?;AWS Health Dashboard;Service Health Dashboard;CloudWatch;CloudTrail
+You need to set up metrics monitoring for every service in AWS. Which service would you use?;CloudWatch;CloudTrail;X-Ray;Personal Health Dashboard
+Which service allows you to inspect, audit and record events and API calls made within your AWS account?;CloudTrail;CloudWatch;X-Ray;Redshift
+Which AWS service automatically analyses code and provides performance recommendations?;CodeGuru;X-Ray;CodePipeline;CloudWatch
+How would you describe Amazon CloudWatch Logs?;A single, highly scalable service that centralises the logs from all of your systems, applications and AWS services that you use;A service that provides a real-time stream of system events that describe changes in AWS resources;A service that enables governance, compliance, operational auditing and risk auditing of your AWS account;A service that lets you run code without provisioning or managing servers
+If a resource is deleted in AWS, which service should you use to investigate first?;CloudTrail;CloudWatch Logs;Personal Heath Dashboard;CloudWatch Events
+Your private subnets need to connect to the Internet while still remaining private. Which AWS-managed VPC component allows you to do this?;NAT Gateways;NAT Instances;Internet Gateway;Security Groups
+A public subnet is accessible from the Internet while a private subnet is not accessible from the Internet.;Yes;No, all subnets are accessible from the internet;No, all subnets are not accessible from the internet;No, a private subnet is accessible from the internet while a public subnet is not accessible from the internet
+Which type of firewall has both ALLOW and DENY rules and operates at the subnet level?;Network Access Control List (NACL);Web Application Firewall (WAF);Security Groups;GuardDuty
+You would like to connect hundreds of VPCs and your on-premises data centres together. Which AWS service allows you to do link all these together efficiently?;Transit Gateway;Site-to-Site VPN;Internet Gateway;Direct Connect
+A company needs two VPCs to communicate with each other. What can they use?;VPC Peering;VPC Endpoints;AWS Direct Connect;Internet Gateway
+You need a logically isolated section of AWS, where you can launch AWS resources in a private network that you define. What should you use?;A VPC;Subnets;Availability Zones;NAT Instances
+A company needs to have a private, secure and fast connection between its on-premises data centres and the AWS Cloud. Which connection should they use?;AWS Direct Connect;AWS Connect;Site-to-Site VPN;VPC Peering
+Your VPC needs to connect with the Internet. Which VPC component can help?;Internet Gateway;NAT Gateways;NAT Instances;Network ACL
+Data sitting on an RDS instance would be referred to as?;Data at rest;Data in transit;Encrypted data;Data for backup
+According to the Shared Responsibility Model, who is responsible for firewall and network configuration for EC2 Instances?;The customer;AWS;AWS and the customer;No one is responsible
+Which of the following services can you use to discover and protect your sensitive data in AWS?;Macie;Shield;Artifact;X-Ray
+Which AWS service lets you quickly find the root of potential security issues to take faster actions?;Detective;Inspector;CloudWatch;WAF
+A company would like to protect its web applications from common web exploits that may affect availability, compromise security or consume excessive resources. Which AWS service should they use?;Web Application Firewall (WAF);Auto Scaling Groups (ASG);Shield;CloudHSM
+Where can you find on-demand access to AWS compliance documentation and AWS agreements?;Artifact;Personal Health Dashboard;Secrets Manager;Shared Responsibility Model
+You want to record configurations and changes over time. Which service allows you to do this?;Config;Inspector;GuardDuty;Secrets Manager
+A company would like to secure network communications using SSL & TLS certificates. Which AWS service can it use?;Certificate Manager (ACM);Secrets Manager;Macie;WAF
+According to the Shared Responsibility Model, who is responsible for Patch Management?;AWS and the customer;The customer;AWS;No one is responsible
+You want to centrally automate security checks across several AWS accounts. Which AWS service can you use?;Security Hub;Macie;Detective;CloudTrail
+Which of the following services is managed by AWS and is used to manage encryption keys?;KMS;CloudHSM;AWS Secrets Manager;IAM
+A company would like to automate security on EC2 instances to assess security and vulnerabilities in these instances. Which AWS service should it use?;Inspector;Config;Trusted Advisor;Systems Manager
+Which of the following actions does NOT require the root user?;Access the billing dashboard;Close your AWS account;Change your AWS Support plan;Register as a seller in the Reserved Instance Marketplace
+According to the Shared Responsibility Model, who is responsible for protecting hardware?;AWS;The customer;AWS and the customer;No one is responsible
+Which AWS service's ONLY role is to safeguard running applications from DDoS attacks?;Shield;WAF;CloudFront;KMS
+Which service is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your AWS accounts and workloads?;GuardDuty;KMS;WAF;Inspector
+Which of the following options is NOT a situation where you should contact the AWS Abuse team?;Losing your MFA device;DDoS attack from AWS-owned IP addresses;Spam from AWS-owned IP addresses or AWS resources;Hosting objectionable or copyrighted content on AWS
+A company would like to implement a chatbot that will convert speech-to-text and recognize the customers' intentions. What service should it use?;Lex;Transcribe;Rekognition;Connect
+Which fully managed service can deliver highly accurate forecasts?;Forecast;Personalise;SageMaker;Lex
+You would like to find objects, people, text or scenes in images and videos. What AWS service should you use?;Rekognition;Polly;Kendra;Lex
+A start-up would like to rapidly create customized user experiences. Which AWS service can help?;Personalise;Kendra;Connect;Polly
+A research team would like to group articles by topics using Natural Language Processing (NLP). Which service should they use?;Comprehend;Translate;Lex;Rekognition
+A company would like to convert its documents into different languages, with natural and accurate wording. What should they use?;Translate;Transcribe;Polly;WordTranslator
+A developer would like to build, train and deploy a machine learning model quickly. Which service can he use?;SageMaker;Polly;Comprehend;Personalise
+Which AWS service makes it easy to convert speech-to-text?;Transcribe;Connect;Translate;Polly
+Which of the following services is a document search service powered by machine learning?;Kendra;Forecast;Comprehend;Polly
+Which tool allows you to centrally manage all users and roles permissions in your organization?;Service control policies;Technical Account Manager (TAM);IAM;Config
+You would like to automatically set up and govern a secure multi-account AWS environment with best practices for your organization. Which AWS tool can you use?;Control Tower;Organisations;Trusted Advisor;Security Hub
+A company would like recommendations regarding its performance, security and fault tolerance. What can it use?;Trusted Advisor;Inspector;Config;Technical Account Manager
+Which of the following is INCORRECT regarding AWS Organizations?;Faster access to the AWS Support;Manage multiple AWS accounts;Consolidated billing across all accounts;Volume discounts from aggregated usage
+What is the most cost-effective option to have 24x7 phone, email and chat support?;Business Support Plan;Basic Support Plan;Developer Support Plan;Enterprise Support Plan
+What can you use to estimate the cost of your architecture solution?;Simple Monthly Calculator/Pricing Calculator;Cost and Usage Reports;Total Cost of Ownership (TCO);Trusted Advisor
+A company is not sure whether or not it is cost-effective to migrate to the AWS Cloud. Which service can help the executive board make a decision?;Pricing Calculator;Simple Monthly Calculator;Billing Dashboard;Cost Explorer
+What do Resource Groups rely on to group your resources?;Tags;Labels;Categories;Stickers
+What can you use to get alerts when your costs and usage are exceeding or are forecasted to exceed your budgeting amount?;Budgets;CloudWatch Billing Alarms;Cost and Usage Reports;Billing Dashboard
+A company would like to choose the best Savings Plan and forecast its cost in the next 3 months. Which AWS service can help?;Cost Explorer;Cost and Usage Reports;Budgets;Forecast
+Which of the following options uses machine learning to recommend optimal AWS resources and therefore reduces costs?;Compute Optimiser;Trusted Advisor;Budgets;Cost Explorer
+Which services are free to use in AWS?;IAM, VPC, Consolidated Billing and Elastic Beanstalk;Elastic Beanstalk, CloudFormation, Auto Scaling Groups and Lambda;SNS, SQS, IAM, VPC;All services have a free tier included
+When you reserve, the larger the upfront payment, the smaller the discount.;False, the larger the upfront, the bigger the discount;True;False, the upfront payment does not matter on the discount;False, the smaller the upfront, the bigger the discount
+Which of the following is NOT a pricing factor in S3?;Data transfer into S3;Storage class;Objects size;Type of requests
+Which of the following options can provide up to 66% discount compared to On-demand for a commitment to a consistent amount of usage for 1 or 3 years and offers the possibility to change EC2 instances family type?;Compute Savings Plans;Spot instances;Reserved instances;EC2 Instance Savings Plans
+You are running an on-demand Linux EC2 instance, what timing is applied regarding billing?;Pay per second;Pay per minute;Pay per hour;Pay per day
+Which pricing model allows you to minimize risks, predictably manage budgets and comply with long-term requirements and is available for EC2, DynamoDB, ElastiCache, RDS and Redshift?;Save when you reserve;Pay as you go;Pay less as AWS grows;Pay less by using more
+Which RDS pricing option is the most cost-effective if you need capacity for 3 years?;Reserved Instances;On-Demand;Spot Instances;Dedicated Instances
+A company would like to use their on-premises Microsoft Active Directory to connect to its AWS resources. Which service can it use?;Directory Services;IAM Identity Centre;Direct Connect;Cognito
+Which AWS service allows you to create temporary, limited-privilege credentials for your AWS resources?;Security Token Service (STS);IAM Identity Centre;AWS Directory Services;Amazon Cognito
+A company just created a new mobile application and wants to add a simple and secure user sign-up, sign-in and access control. Which AWS service can it use?;Cognito;IAM;Directory Services;IAM Identity Centre
+A company would like to centrally manage access to multiple AWS accounts and business applications. Which service can it use?;IAM Identity Centre;Organisations;Cognito;Directory Service
+You would like to convert an S3 file so it can be played on users’ devices. Which AWS service can help?;Elastic Transcoder;Transcribe;AppStream 2.0;Sumerian
+You would like to access desktop applications through a browser. Which AWS service would you use?;AppStream 2.0;Outposts;WorkSpaces;EC2 Instance Connect
+Which AWS service can be used to test your application across real desktop browsers and mobile devices?;Device Farm;IoT Core;AppStream 2.0;WorkSpaces
+Which AWS service is serverless and lets you connect billions of devices to the AWS Cloud?;IoT Core;Transit Gateway;Connect;Elastic Transcoder
+A hybrid company would like to provision desktops to their employees so they can access securely both the AWS Cloud and their data centres. Which AWS service can help?;WorkSpaces;AppStream 2.0;Site-to-Site VPN;Sumerian
+Which of the following are design principles of Performance Efficiency?;Go global in minutes & experiment more often;Analyse and attribute expenditure & stop spending money on data centre operations;Make frequent, small, reversible changes & anticipate failure;Automate security best practices & keep away people from data
+Which of the following is NOT an AWS Partner Network (APN) type?;APN Services Partners;APN Technology Partners;APN Consulting Partners;APN Training Partners
+Which AWS service is the key to Operational Excellence?;CloudFormation;EC2;OpsWork;CodeDeploy
+AWS Cost Explorer and AWS Trusted Advisor are services examples of which Well-Architected Framework pillar?;Cost Optimisation;Security;Operational Excellence;Performance Efficiency
+Implementing Security Groups, NACLs, KMS or CloudTrail reflects which Well-Architected Framework Pillar?;Security;Reliability;Performance Efficiency;Cost Optimisation

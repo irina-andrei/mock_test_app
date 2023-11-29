@@ -12,7 +12,9 @@
 
 <br>
 
-### Turning program into .exe
+![AltText](preview.png)
+
+### Turning program into .exe, which will run as a separate terminal (no need for any dependencies to run the .exe file):
 
 1. Installing pyinstaller:
 
@@ -28,11 +30,13 @@ pyinstaller --onefile --add-data="questions.txt;." mock_test_app.py
 
 #### Possible blockers:
 
-* it might not access the .txt file unless you run it directly from the terminal:
+* it might not access the .txt file properly unless you run it directly from the terminal:
+
 ```shell
 ./dist/mock_test_app.exe  
 ```
-* In that case, you need to add this code to your script:
+
+* In that case, you need to add this code to your script (this will allow opening the .exe file from anywhere, without any need for dependencies):
 
 ```python
 import sys, os
