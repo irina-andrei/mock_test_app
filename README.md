@@ -42,3 +42,10 @@ pyinstaller --onefile --add-data="questions.txt;." mock_test_app.py
 import sys, os
 os.chdir(sys._MEIPASS)
 ```
+
+### Important note for the .exe app:
+Some terminal emulators don't support ANSI escape codes (which is what I used for different colour display). To add this, you need to run this command in cmd:
+```python
+reg add HKEY_CURRENT_USER\Console /v VirtualTerminalLevel /t REG_DWORD /d 1
+```
+This essentially 'turns on' the terminal ability to read ANSI escape characters.
